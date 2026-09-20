@@ -223,8 +223,8 @@ footer p {
   flex-direction: row;
   flex-wrap: wrap;
   /* justify-content: ; */
-  gap: 8rem;
-  /* justify-content: space-evenly; */
+  gap: 10%;
+  justify-content: start;
   
 }
 
