@@ -177,6 +177,7 @@ footer p {
 /* GitHub / Email */
 .links a {
   font-weight: 500;
+  border-bottom: none;
 }
 .links a:hover {
   color: var(--accent-dark);
@@ -218,14 +219,33 @@ footer p {
   color: var(--accent-dark);
   border-bottom-color: var(--accent);
 }
-.teaching-info{
+.teaching-columns {
+  display: flex;
+  gap: 10%;
+}
+.teaching-info {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   /* justify-content: ; */
   gap: 10%;
   justify-content: start;
-  
+}
+
+.hero {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+.hero-text {
+  flex: 1;
+}
+.portrait {
+  width: 240px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
 }
 
 /* ---------- Mobile ---------- */
@@ -251,5 +271,16 @@ footer p {
   }
   .card {
     padding: 1.25rem 1.25rem 1.5rem;
+  }
+  .hero {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .portrait {
+    width: 160px;
+  }
+  .teaching-columns {
+    flex-direction: column-reverse;
   }
 }
