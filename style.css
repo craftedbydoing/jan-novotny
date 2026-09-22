@@ -40,7 +40,7 @@ body {
   font-family: var(--sans);
   font-size: 18px;
   line-height: 1.7;
-  max-width: 900px;
+  max-width: 740px;
   margin: 0 auto;
   padding: 4rem 1.5rem;
 }
@@ -241,11 +241,51 @@ footer p {
   flex: 1;
 }
 .portrait {
-  width: 240px;
-  aspect-ratio: 4 / 5;
+  width: 260px;
+  aspect-ratio: 5 / 4;
   object-fit: cover;
   border-radius: 4px;
   flex-shrink: 0;
+}
+/* ---------- Blog ---------- */
+.posts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.post {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--surface);
+}
+.post time {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding-top: 0.25rem;
+}
+.post h2 {
+  margin: 0 0 0.3rem;
+  padding: 0;
+  font-size: 1.35rem;
+}
+.post h2::before {
+  display: none;
+}
+.post h2 a {
+  color: var(--text);
+  transition: color 0.15s ease;
+}
+.post h2 a:hover {
+  color: var(--accent);
+}
+.post p {
+  margin-bottom: 0.3rem;
+}
+.post-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
 /* ---------- Mobile ---------- */
@@ -278,9 +318,13 @@ footer p {
     gap: 1.5rem;
   }
   .portrait {
-    width: 160px;
+    width: 200px;
   }
   .teaching-columns {
     flex-direction: column-reverse;
+  }
+  .post {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
   }
 }
